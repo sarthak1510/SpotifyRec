@@ -18,9 +18,7 @@ class JSONPreferenceParser(BaseOutputParser):
             raise ValueError(f"Could not parse output: {text}")
 
 class MusicPreferenceAgent:
-    """
-    Production-grade class to extract user music preferences from free text.
-    """
+    
 
     def __init__(self, api_key: str):
         os.environ["OPENAI_API_KEY"] = api_key
