@@ -1,8 +1,7 @@
-fastapi
-uvicorn
 streamlit
+requests
 openai
 langchain
 python-dotenv
 guardrails-ai
-requests
+lxml==4.9.3
