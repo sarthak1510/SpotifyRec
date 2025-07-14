@@ -1,0 +1,5 @@
+name = "streamlit-ai-app"
+version = "0.1.0"
+description = "Streamlit app using OpenAI + LangChain + Guardrails"
+requires-python = ">=3.10,<3.11"
+dependencies = []
