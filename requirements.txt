@@ -7,3 +7,4 @@ guardrails-ai
 lxml==4.9.3
 uvicorn[standard]
 fastapi 
+langchain-openai
