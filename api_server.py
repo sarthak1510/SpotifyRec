@@ -74,3 +74,7 @@ def get_recommendations(data: UserPrompt):
     logs.append("Recommendation flow completed successfully.")
 
     return {"logs": logs, "recommendations": final_filtered}
+    @app.get("/")
+def root():
+    return {"message": "Spotify Recommendation API is running 🚀"}
+
