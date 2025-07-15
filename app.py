@@ -54,7 +54,7 @@ if user_input:
 
     with st.spinner("Getting recommendations..."):
         try:
-            res = requests.post(API_URL, json={"prompt": user_input}, timeout=300)
+            res = requests.post(API_URL, json={"prompt": user_input}, timeout=1800)
             data = res.json()
             logs = data.get("logs", [])
             recommendations = data.get("recommendations", [])
