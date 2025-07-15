@@ -1,88 +1,47 @@
-🎧 Personalised Music Recommendation Agentic System
+# 🎧 Personalised Music recommendation Agentic System
 
-🧠 Multi-Agent LLM System for Personalized Music RecommendationsFastAPI + OpenAI API's + Spotify OAuth + Streamlit
+> 🧠 Multi-Agent LLM System for Personalized Music Recommendations  
+> **FastAPI + OpenAI API's + Spotify OAuth + Streamlit**
 
+---
 
-📌 Summary
-This is a multi-agent orchestration system that converts free-form natural language prompts (e.g. "hindi sad r&b for gym") into personalized Spotify recommendations. Built with a modular AI architecture that leverages LLM agents, guardrails, and user-authenticated data flows, this project simulates real-world production AI deployment.
+## 📌 Summary
 
-🧠 Key Features & Architecture Highlights
+This is a **multi-agent orchestration system** that converts free-form natural language prompts (e.g. _"hindi sad r&b for gym"_) into **personalized Spotify recommendations**. Built with a modular AI architecture that leverages **LLM agents**, **guardrails**, and **user-authenticated data flows**, this project simulates real-world production AI deployment
 
+---
 
+## 🧠 Key Features & Architecture Highlights
 
-Layer
-Description
+| Layer                         | Description                                                                 |
+|------------------------------|-----------------------------------------------------------------------------|
+| 🧠 **LLM-Oriented Agents**    | Modular agents (LLMs) handle preference extraction, language detection, and filtering |
+| 🔁 **Multi-Agent Pipeline**   | Orchestrated flow between GPT-based agents and Spotify services             |
+| 🔒 **User-Centric OAuth**     | Spotify OAuth 2.0 with dynamic token refresh and safe session persistence   |
+| ✅ **Guardrails Validation**  | Output validation with `validate_recommendations()` ensures safety and quality |
+| 🧠 **Language Filter Agent**  | NLP-based filtering of track results based on user’s linguistic preference |
+| 🎧 **Spotify Service Layer** | Authenticated search, liked song history exclusion, metadata handling       |
+| 🖥️ **Streamlit Frontend**     | Lightweight UI to interface with the system and trigger recommendation flows |
+| ⚙️ **Production API**         | RESTful FastAPI backend with scalable deployment on Render                  |
 
+---
 
+## 🧱 Modular Tech Stack
 
-🧠 LLM-Oriented Agents
-Modular agents (LLMs) handle preference extraction, language detection, and filtering
+| Component       | Tech Stack                               |
+|----------------|-------------------------------------------|
+| AI Agents       | `OpenAI GPT`, custom multi-agent system  |
+| Backend API     | `FastAPI`, `Uvicorn`, `Render`           |
+| Auth Layer      | `Spotify OAuth 2.0`, `Spotipy`           |
+| Frontend        | `Streamlit`                              |
+| Env Management  | `.env`, `Render Environment Variables`   |
+| Validation      | `Custom guardrails.py` module            |
 
+---
 
-🔁 Multi-Agent Pipeline
-Orchestrated flow between GPT-based agents and Spotify services
+## 🏗️ Multi-Agent System Architecture
 
-
-🔒 User-Centric OAuth
-Spotify OAuth 2.0 with dynamic token refresh and safe session persistence
-
-
-✅ Guardrails Validation
-Output validation with validate_recommendations() ensures safety and quality
-
-
-🧠 Language Filter Agent
-NLP-based filtering of track results based on user’s linguistic preference
-
-
-🎧 Spotify Service Layer
-Authenticated search, liked song history exclusion, metadata handling
-
-
-🖥️ Streamlit Frontend
-Lightweight UI to interface with the system and trigger recommendation flows
-
-
-⚙️ Production API
-RESTful FastAPI backend with scalable deployment on Render
-
-
-
-🧱 Modular Tech Stack
-
-
-
-Component
-Tech Stack
-
-
-
-AI Agents
-OpenAI GPT, custom multi-agent system
-
-
-Backend API
-FastAPI, Uvicorn, Render
-
-
-Auth Layer
-Spotify OAuth 2.0, Spotipy
-
-
-Frontend
-Streamlit
-
-
-Env Management
-.env, Render Environment Variables
-
-
-Validation
-Custom guardrails.py module
-
-
-
-🏗️ Multi-Agent System Architecture
+```plaintext
 [User Prompt]
      ↓
 [Streamlit UI]
@@ -106,7 +65,8 @@ Custom guardrails.py module
 └────────────┬────────────────┘
              ↓
       Final Recommendation JSON
-
+Music Recommendation System
+This project is a music recommendation system that integrates Spotify's API with a FastAPI backend, a Streamlit frontend, and LLM-based agents to generate personalized music recommendations based on user prompts. It supports multi-language prompts, handles OAuth for Spotify, and ensures safe outputs using guardrails.
 📦 Project Structure
 .
 ├── api_server.py                # FastAPI application entrypoint
@@ -191,4 +151,6 @@ API_URL = "https://your-backend.onrender.com/recommend"
     }
   ]
 }
+
+
 
