@@ -5,8 +5,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-API_URL = os.getenv("API_URL", "http://localhost:8000/recommend")
-
+API_URL = os.getenv("API_URL", "https://spotifyrec-t9zi.onrender.com/recommend")
 spotify_svg = """
 <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 168 168" width="32"><path fill="#1ED760" d="M84,0C37.7,0,0,37.7,0,84s37.7,84,84,84s84-37.7,84-84S130.3,0,84,0z M122.5,120.9c-1.5,2.5-4.7,3.3-7.2,1.8
 c-19.8-12.1-44.8-14.9-74.2-8.4c-2.9,0.6-5.8-1.3-6.4-4.3c-0.6-2.9,1.3-5.8,4.3-6.4c32.5-7,60.3-3.7,83.4,10
